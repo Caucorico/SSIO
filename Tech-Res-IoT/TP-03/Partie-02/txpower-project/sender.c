@@ -46,6 +46,7 @@
 #include "net/rime.h"
 #include "dev/leds.h"
 #include "dev/cc2420.h"
+#include "dev/button-sensor.h"
 
 #include <stdio.h> /* For printf() */
 /*---------------------------------------------------------------------------*/
@@ -101,12 +102,15 @@ PROCESS_THREAD(sender_process, ev, data){
 
   PROCESS_EXITHANDLER(abc_close(&abc);)
   PROCESS_BEGIN();
+
+  SENSORS_ACTIVATE(button_sensor);
+
   abc_open(&abc, 128, &abc_call);
-  etimer_set(&et, CLOCK_SECOND);
+  /* etimer_set(&et, CLOCK_SECOND); */
   i = 0;
   txpower = 0;
   counter = 0;
-  printf("Send counter!\n");
+  printf("NEW Send counter!\n");
 
   while(1){
     PROCESS_WAIT_EVENT();
@@ -123,15 +127,18 @@ PROCESS_THREAD(sender_process, ev, data){
       snd->power = cc2420_get_txpower();
       packetbuf_copyfrom(snd, sizeof(snd));
       abc_send(&abc);
-      printf("Message Sent %d, %i, %i.\n", counter++, txpower, snd->power);
-      etimer_set(&et, CLOCK_SECOND/2);
-      if (counter % 32 == 0) {
-        if (i < 7)
-	        i++ ;
-        else
-	        i = 0 ;
-        set_leds(i);
-      }      
+      printf("message Sent %d, %i, %i.\n", counter++, txpower, snd->power);
+   
+      if (counter == 32) {
+        counter = 0;
+        i++;
+      } else {
+        etimer_set(&et, CLOCK_SECOND/2);
+      }
+    }
+    if ( ev = sensors_event && data == &button_sensor ) {
+      etimer_set(&et, CLOCK_SECOND);
+      set_leds(i);
     }    
   }
 
