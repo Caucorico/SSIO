@@ -148,6 +148,12 @@ eventlog-file = ${resultdir}/${configname}-event-log-file.elog
 
 The event-log file save the behavior of the network during the simulation. Everytime an event occur (like packet sent, or ip address set with arp protocol), this event is writ in the logfile.
 
+On the given screenshot, it is possible to see 3 possibilities :
+ - The first part is a packet succesfully transported through the router.
+ - The second part is a packet succesfully sent to the router but lost between the router and **B**.
+ - The third part is a packet lost between **A** and the router.
+![Simulation screenshot](./images/configuration-5.png "Simulation screenshot")
+
 
 # Configuration 6 :
 
