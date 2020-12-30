@@ -169,7 +169,7 @@ We can see the diference between the configuration in this picture :
 ![Simulation screenshot](./images/configuration-6.png "Simulation screenshot")
 
 
-# Configuraion 7 :
+# Configuration 7 :
 
 In the **configuration 6**, the protocol that ask to the hosts to retry a send of the packet if it was lost was disabled.
 We can verify that by reading the numRetry statics that is **0** in the configuration number 6.
@@ -177,6 +177,7 @@ We can verify that by reading the numRetry statics that is **0** in the configur
 In the **configuration 7**, the *Ack* mechanism was enabled. So, when a packet is lost, after a timeout, the emitter will try to resend it.
 We can verify that by reading the numRetry statistics that is **74** in the configuration number 7. (74 can change because of the stochastics simulation)
 
+In this screenshot, the wireless-6 with **0** retry is on the top and the wireless-7 with some retries on the bottom.
 ![Simulation screenshot](./images/configuration-7-num-retry.png "Simulation screenshot")
 
 In the source file of Csma (`inet/src/inet/linklayer/csmaca/CsmaCaMac.cc`), we can see the implementation of the protocol.
