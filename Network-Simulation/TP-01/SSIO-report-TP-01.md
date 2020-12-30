@@ -87,15 +87,19 @@ After the modification :
 ![Simulation screenshot](./images/after-modification.png "Simulation screenshot")
 
 
-For the mean queue size :
+#### For the mean queue size :
 
-$$\frac{\lambda}{\mu} = \frac{\frac{1}{1}}{\frac{1}{0.75}} = 0,75$$
+![formula](https://latex.codecogs.com/svg.latex?\frac{\lambda}{\mu}=\frac{\frac{1}{1}}{\frac{1}{0.75}}=0,75)
+
 So, we can now compute the mean queue size :
-$$\frac{0.75}{1-0.75} = 3$$
+
+![formula](https://latex.codecogs.com/svg.latex?\frac{0.75}{1-0.75}=3)
+
 Our result is **3** that correspond to the result of the simulation (3.144).
 
-For the mean waiting time :
-$$\frac{0.75}{1.33(1-0.75)} = 2.25$$
+#### For the mean waiting time :
+
+![formula](https://latex.codecogs.com/svg.latex?\frac{0.75}{1.33(1-0.75)}=2.25)
 
 Our result is **2.25** that correspond with the result of the simulation (2.21).
 
