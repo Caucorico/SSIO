@@ -152,6 +152,7 @@ On the given screenshot, it is possible to see 3 possibilities :
  - The first part is a packet succesfully transported through the router.
  - The second part is a packet succesfully sent to the router but lost between the router and **B**.
  - The third part is a packet lost between **A** and the router.
+
 ![Simulation screenshot](./images/configuration-5.png "Simulation screenshot")
 
 
@@ -163,6 +164,7 @@ and, if so, it will wait that the communication stop to try another communicatio
 With this way, the number of collision decreased so the communication quality is better.
 
 We can see the diference between the configuration in this picture :
+(The config-5 without CSMA on the left, the config-6 with CSMA on the right)
 
 ![Simulation screenshot](./images/configuration-6.png "Simulation screenshot")
 
