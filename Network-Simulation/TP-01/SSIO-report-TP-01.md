@@ -23,6 +23,7 @@ To change the *mean service time*, we can use the same methods as for the *inter
 
 The mathematical formula for the **mean queue size** is : 
 $$\frac{\rho}{1-\rho}$$
+![formula](https://latex.codecogs.com/svg.latex?\frac{\rho}{1-\rho})
 And :
 $$\rho = \frac{\lambda}{\mu}$$
 
