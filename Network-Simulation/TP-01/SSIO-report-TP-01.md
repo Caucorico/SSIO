@@ -22,12 +22,12 @@ To change the *mean service time*, we can use the same methods as for the *inter
 ## Give the mathematical formula for the following metrics : mean queue size, mean waiting time in the queue.
 
 The mathematical formula for the **mean queue size** is : 
-![formula](https://latex.codecogs.com/svg.latex?\frac{\rho}{1-\rho})
+[formula](https://latex.codecogs.com/svg.latex?\frac{\rho}{1-\rho})
 And :
-![formula](https://latex.codecogs.com/svg.latex?\rho=\frac{\lambda}{\mu})
+[formula](https://latex.codecogs.com/svg.latex?\rho=\frac{\lambda}{\mu})
 
 The mathematical formula for the **mean waiting time** is :
-$$\frac{\rho}{\mu (1-\rho)}$$
+[formula](https://latex.codecogs.com/svg.latex?\frac{\rho}{\mu(1-\rho)})
 
 
 ## You will have to modify the sources to measure queueing time in simulation : set the arrival time field of the packets by adding one line to the sources at the right location in the appropriate source file.
