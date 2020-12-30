@@ -22,10 +22,9 @@ To change the *mean service time*, we can use the same methods as for the *inter
 ## Give the mathematical formula for the following metrics : mean queue size, mean waiting time in the queue.
 
 The mathematical formula for the **mean queue size** is : 
-$$\frac{\rho}{1-\rho}$$
 ![formula](https://latex.codecogs.com/svg.latex?\frac{\rho}{1-\rho})
 And :
-$$\rho = \frac{\lambda}{\mu}$$
+![formula](https://latex.codecogs.com/svg.latex?\rho=\frac{\lambda}{\mu})
 
 The mathematical formula for the **mean waiting time** is :
 $$\frac{\rho}{\mu (1-\rho)}$$
